@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "s3-backend" {
   }
 }
 
-/*
+
 # Versioning
 resource "aws_s3_bucket_versioning" "versioning_example" {
   bucket = aws_s3_bucket.s3-backend.id
@@ -16,7 +16,7 @@ resource "aws_s3_bucket_versioning" "versioning_example" {
     status = var.versioning
   }
 }
-*/
+
 # Random integer
 resource "random_integer" "s3" {
   max = 100
@@ -39,7 +39,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "backend" {
   }
 }
 
-/*
+
 # Privay policies
 resource "aws_s3_bucket_public_access_block" "block" {
   bucket = aws_s3_bucket.s3-backend.id
@@ -49,4 +49,3 @@ resource "aws_s3_bucket_public_access_block" "block" {
   ignore_public_acls      = true
   restrict_public_buckets = true
 }
-*/
